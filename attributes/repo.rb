@@ -14,8 +14,6 @@
 # limitations under the License.
 #
 
-include_attribute 'ceph-chef'
-
 default['ceph']['el_version'] = 'el7'
 default['ceph']['repo_url'] = 'http://download.ceph.com'
 default['ceph']['repo']['create'] = true

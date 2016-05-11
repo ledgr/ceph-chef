@@ -31,7 +31,7 @@ directory "/var/lib/ceph/mds/#{cluster}-#{node['hostname']}" do
   not_if "test -d /var/lib/ceph/mds/#{cluster}-#{node['hostname']}"
 end
 
-ceph_client 'mds' do
+ceph_chef_client 'mds' do
   caps('osd' => 'allow *', 'mon' => 'allow rwx')
   keyname "mds.#{node['hostname']}"
   filename "/var/lib/ceph/mds/#{cluster}-#{node['hostname']}/keyring"

@@ -57,7 +57,7 @@ action :add do
 end
 
 def load_current_resource
-  @current_resource = Chef::Resource::CephClient.new(@new_resource.name)
+  @current_resource = Chef::Resource::CephChefClient.new(@new_resource.name)
   @current_resource.name(@new_resource.name)
   @current_resource.as_keyring(@new_resource.as_keyring)
   @current_resource.keyname(@new_resource.keyname || "client.#{@new_resource.name}.#{node['hostname']}")

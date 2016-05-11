@@ -33,7 +33,7 @@ end
 # has been bootstrapped with Chef - /opt/chef/embedded/bin/gem install --force --local /tmp/netaddr-1.5.1.gem
 # Of course, this means you have downloaded the gem from: https://rubygems.org/downloads/netaddr-1.5.1.gem and then
 # copied it to your /tmp directory.
-chef_gem 'netaddr' do
+chef_gem 'netaddr_source' do
   source '/tmp/netaddr-1.5.1.gem'
   action :install
   compile_time true
